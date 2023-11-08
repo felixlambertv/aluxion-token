@@ -2,13 +2,14 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import dotenv from "dotenv";
 import "hardhat-deploy";
+import "@nomiclabs/hardhat-etherscan";
 
 dotenv.config();
 const { ALCHEMY_API_KEY_MUMBAI, ETHERSCAN_API_KEY } = process.env;
 
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
-  solidity: "0.8.9",
+  solidity: "0.8.20",
   networks: {
     hardhat: {
       chainId: 80001, //Polygon Testnet Mumbai
